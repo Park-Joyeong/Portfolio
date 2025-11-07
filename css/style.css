@@ -1,0 +1,176 @@
+body {
+  background: linear-gradient(
+    90deg,
+    rgba(42, 123, 155, 1) 0%,
+    rgba(87, 199, 133, 1) 50%,
+    rgba(237, 221, 83, 1) 100%
+  );
+  color: white;
+}
+
+header {
+  position: sticky;
+  top: 0px;
+  background-color: #663399b0;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+header nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+header nav ul li a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding: 20px;
+  height: 100vh;
+}
+
+.index-container {
+  max-width: 800px;
+  justify-self: center;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+footer {
+  position: sticky;
+  bottom: 0px;
+  background-color: #663399b0;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+}
+
+.profile-image {
+  /* corner rounding */
+  border-radius: 10%;
+  width: 100%;
+}
+
+.left-side {
+  float: left;
+  width: 30%;
+  height: 100%;
+  margin-right: 10px;
+}
+
+.right-side {
+  float: right;
+  width: 65%;
+  height: 100%;
+  margin-left: 10px;
+}
+
+/* contain floats so footer does not overlap */
+.container::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.resume-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.resume-table th,
+.resume-table td {
+  border: 1px solid #000;
+  padding: 5px;
+  text-align: left;
+  height: 1rem;
+}
+
+.resume-table th {
+  background-color: gray;
+}
+
+.profile-image-section {
+  width: 200px;
+}
+
+.resume- {
+  border: none !important;
+}
+
+/* 태블릿(768~1023) */
+@media (max-width: 1023px) and (min-width: 768px) {
+  body {
+    background: radial-gradient(
+      circle,
+      rgba(238, 174, 202, 1) 0%,
+      rgba(148, 187, 233, 1) 100%
+    );
+  }
+  .left-side,
+  .right-side {
+    float: none;
+    width: 100%;
+    margin: 0;
+  }
+
+  .profile-image-section {
+    width: 150px;
+    margin: 0 auto;
+  }
+
+  .resume-table th {
+    background-color: deepskyblue;
+  }
+}
+
+/* 모바일(~767) */
+@media (max-width: 767px) {
+  body {
+    background: linear-gradient(
+      90deg,
+      rgba(131, 58, 180, 1) 0%,
+      rgba(253, 29, 29, 1) 50%,
+      rgba(252, 176, 69, 1) 100%
+    );
+  }
+  .left-side,
+  .right-side {
+    float: none;
+    width: 100%;
+    margin: 0;
+  }
+
+  .profile-image-section {
+    width: 100px;
+    margin: 0 auto;
+  }
+
+  .resume-table th {
+    background-color: yellowgreen;
+  }
+}
